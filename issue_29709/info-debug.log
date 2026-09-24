@@ -1,0 +1,187 @@
+testchris@ubuntu-4gb-hel1-2:~/issue_29750/podman$ ./bin/podman --log-level=debug info
+DEBU[0000] Read config file "/home/testchris/.config/containers/containers.conf.d/90-test-crun.conf" 
+INFO[0000] ./bin/podman filtering at log level debug    
+DEBU[0000] Called info.PersistentPreRunE(./bin/podman --log-level=debug info) 
+INFO[0000] Setting parallel job count to 7              
+DEBU[0000] Using conmon: "/usr/bin/conmon"              
+INFO[0000] Using sqlite as database backend             
+DEBU[0000] systemd-logind: Unknown object '/'.          
+DEBU[0000] Using graph driver                           
+DEBU[0000] Using graph root /home/testchris/.local/share/containers/storage 
+DEBU[0000] Using run root /run/user/1000/containers     
+DEBU[0000] Using static dir /home/testchris/.local/share/containers/storage/libpod 
+DEBU[0000] Using tmp dir /run/user/1000/libpod/tmp      
+DEBU[0000] Using volume path /home/testchris/.local/share/containers/storage/volumes 
+DEBU[0000] Using transient store: false                 
+DEBU[0000] Database uses empty-string graph driver, substituting default "" 
+DEBU[0000] Initializing event backend journald          
+DEBU[0000] overlay: test mount with multiple lowers succeeded 
+DEBU[0000] Cached value indicated that overlay is supported 
+DEBU[0000] overlay: test mount indicated that metacopy is not being used 
+DEBU[0000] backingFs=extfs, projectQuotaSupported=false, useNativeDiff=true, usingMetacopy=false 
+INFO[0000] [graphdriver] using prior storage driver: overlay 
+DEBU[0000] Configured OCI runtime runsc initialization failed: no valid executable found for OCI runtime runsc: invalid argument 
+DEBU[0000] Configured OCI runtime crun-wasm initialization failed: no valid executable found for OCI runtime crun-wasm: invalid argument 
+DEBU[0000] Configured OCI runtime runc initialization failed: no valid executable found for OCI runtime runc: invalid argument 
+DEBU[0000] Configured OCI runtime runj initialization failed: no valid executable found for OCI runtime runj: invalid argument 
+DEBU[0000] Configured OCI runtime youki initialization failed: no valid executable found for OCI runtime youki: invalid argument 
+DEBU[0000] Configured OCI runtime krun initialization failed: no valid executable found for OCI runtime krun: invalid argument 
+DEBU[0000] Configured OCI runtime ocijail initialization failed: no valid executable found for OCI runtime ocijail: invalid argument 
+DEBU[0000] Configured OCI runtime crun-vm initialization failed: no valid executable found for OCI runtime crun-vm: invalid argument 
+DEBU[0000] Configured OCI runtime kata initialization failed: no valid executable found for OCI runtime kata: invalid argument 
+DEBU[0000] Using OCI runtime "/usr/local/bin/crun"      
+DEBU[0000] Initialized SHM lock manager at path /libpod_rootless_lock_1000 
+DEBU[0000] Podman detected system restart - performing state refresh 
+DEBU[0000] overlay: test mount indicated that volatile is being used 
+DEBU[0000] Check for idmapped mounts support create mapped mount: mount_setattr /home/testchris/.local/share/containers/storage/overlay/compat3822963559/lower: operation not permitted 
+host:
+  arch: amd64
+  buildahVersion: 1.45.0
+  cdiSpecDirs:
+  - /etc/cdi
+  - /var/run/cdi
+  cgroupControllers:
+  - cpu
+  - memory
+  - pids
+  cgroupManager: systemd
+  cgroupVersion: v2
+  conmon:
+    package: conmon_2.1.10+ds1-1build2_amd64
+    path: /usr/bin/conmon
+    version: 'conmon version 2.1.10, commit: unknown'
+  cpuUtilization:
+    idlePercent: 98.52
+    systemPercent: 0.28
+    userPercent: 1.2
+  cpus: 2
+  databaseBackend: sqlite
+  distribution:
+    codename: noble
+    distribution: ubuntu
+    version: "24.04"
+  eventLogger: journald
+  freeLocks: 2044
+  hostname: ubuntu-4gb-hel1-2
+  idMappings:
+    gidmap:
+    - container_id: 0
+      host_id: 1000
+      size: 1
+    - container_id: 1
+      host_id: 100000
+      size: 65536
+    uidmap:
+    - container_id: 0
+      host_id: 1000
+      size: 1
+    - container_id: 1
+      host_id: 100000
+      size: 65536
+  kernel: 6.8.0-139-generic
+  linkmode: dynamic
+  logDriver: journald
+  memAvailable: 2419560448
+  memFree: 829267968
+  memTotal: 4005441536
+  networkBackend: netavark
+  networkBackendInfo:
+    backend: netavark
+    defaultNetwork: podman
+    dns:
+      package: aardvark-dns_1.4.0-5_amd64
+      path: /usr/lib/podman/aardvark-dns
+      version: aardvark-dns 1.4.0
+    package: netavark_1.4.0-4_amd64
+    path: /usr/lib/podman/netavark
+    version: netavark 2.1.0
+  ociRuntime:
+    features: '{"ociVersionMin":"1.0.0","ociVersionMax":"1.1.0+dev","hooks":["prestart","createRuntime","createContainer","startContainer","poststart","poststop"],"mountOptions":["rw","rrw","ro","rro","rdirsync","rdiratime","rnodev","rnorelatime","nodiratime","rnodiratime","dirsync","rnosuid","ratime","diratime","rnoatime","strictatime","rstrictatime","noatime","rnostrictatime","rnomand","rprivate","nostrictatime","rnoexec","nodev","rmand","norelatime","mand","idmap","atime","nomand","rsuid","rbind","suid","bind","rslave","nosuid","defaults","rrelatime","rsync","remount","dest-nofollow","dev","rdev","private","noexec","src-nofollow","sync","relatime","async","rasync","tmpcopyup","shared","rshared","slave","rexec","unbindable","runbindable","exec","copy-symlink"],"linux":{"namespaces":["cgroup","ipc","mount","network","pid","user","uts"],"capabilities":["CAP_CHOWN","CAP_DAC_OVERRIDE","CAP_DAC_READ_SEARCH","CAP_FOWNER","CAP_FSETID","CAP_KILL","CAP_SETGID","CAP_SETUID","CAP_SETPCAP","CAP_LINUX_IMMUTABLE","CAP_NET_BIND_SERVICE","CAP_NET_BROADCAST","CAP_NET_ADMIN","CAP_NET_RAW","CAP_IPC_LOCK","CAP_IPC_OWNER","CAP_SYS_MODULE","CAP_SYS_RAWIO","CAP_SYS_CHROOT","CAP_SYS_PTRACE","CAP_SYS_PACCT","CAP_SYS_ADMIN","CAP_SYS_BOOT","CAP_SYS_NICE","CAP_SYS_RESOURCE","CAP_SYS_TIME","CAP_SYS_TTY_CONFIG","CAP_MKNOD","CAP_LEASE","CAP_AUDIT_WRITE","CAP_AUDIT_CONTROL","CAP_SETFCAP","CAP_MAC_OVERRIDE","CAP_MAC_ADMIN","CAP_SYSLOG","CAP_WAKE_ALARM","CAP_BLOCK_SUSPEND","CAP_AUDIT_READ","CAP_PERFMON","CAP_BPF","CAP_CHECKPOINT_RESTORE"],"cgroup":{"v1":true,"v2":true,"systemd":true,"systemdUser":true},"seccomp":{"enabled":true,"actions":["SCMP_ACT_ALLOW","SCMP_ACT_ERRNO","SCMP_ACT_KILL","SCMP_ACT_KILL_PROCESS","SCMP_ACT_KILL_THREAD","SCMP_ACT_LOG","SCMP_ACT_NOTIFY","SCMP_ACT_TRACE","SCMP_ACT_TRAP"],"operators":["SCMP_CMP_NE","SCMP_CMP_LT","SCMP_CMP_LE","SCMP_CMP_EQ","SCMP_CMP_GE","SCMP_CMP_GT","SCMP_CMP_MASKED_EQ"]},"apparmor":{"enabled":true},"selinux":{"enabled":true},"mountExtensions":{"idmap":{"enabled":true}},"intelRdt":{"enabled":true},"netDevices":{"enabled":true},"memoryPolicy":{"modes":["MPOL_DEFAULT","MPOL_PREFERRED","MPOL_BIND","MPOL_INTERLEAVE","MPOL_LOCAL","MPOL_PREFERRED_MANY","MPOL_WEIGHTED_INTERLEAVE"],"flags":["MPOL_F_NUMA_BALANCING","MPOL_F_RELATIVE_NODES","MPOL_F_STATIC_NODES"]}},"annotations":{"io.github.seccomp.libseccomp.version":"2.6.1","org.opencontainers.runc.checkpoint.enabled":"true","run.oci.crun.checkpoint.enabled":"true","run.oci.crun.commit":"d66af6a0fc2ab5fabd951b427a292344632ce074","run.oci.crun.version":"1.29","run.oci.crun.wasm":"false"},"potentiallyUnsafeConfigAnnotations":["module.wasm.image/variant","io.kubernetes.cri.container-type","run.oci.","org.criu.","krun."]}'
+    name: /usr/local/bin/crun
+    package: Unknown
+    path: /usr/local/bin/crun
+    version: |-
+      crun version 1.29
+      commit: d66af6a0fc2ab5fabd951b427a292344632ce074
+      rundir: /run/user/1000/crun
+      spec: 1.0.0
+      +SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +JSON_C
+  os: linux
+  pasta:
+    executable: /usr/bin/pasta
+    package: passt_0.0~git20260728.f8df3f1-1_amd64
+    version: |
+      pasta 0.0~git20260728.f8df3f1-1
+      Copyright Red Hat
+      GNU General Public License, version 2 or later
+        <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
+      This is free software: you are free to change and redistribute it.
+      There is NO WARRANTY, to the extent permitted by law.
+  remoteSocket:
+    exists: true
+    path: /run/user/1000/podman/podman.sock
+  rootlessNetworkCmd: pasta
+  rootlessPortForwarder: rootlessport
+  security:
+    apparmorEnabled: false
+    capabilities: CAP_CHOWN,CAP_DAC_OVERRIDE,CAP_FOWNER,CAP_FSETID,CAP_KILL,CAP_NET_BIND_SERVICE,CAP_SETFCAP,CAP_SETGID,CAP_SETPCAP,CAP_SETUID,CAP_SYS_CHROOT
+    rootless: true
+    seccompEnabled: true
+    seccompProfilePath: ""
+    selinuxEnabled: false
+  serviceIsRemote: false
+  swapFree: 0
+  swapTotal: 0
+  uptime: 46h 53m 35.00s (Approximately 1.92 days)
+  variant: ""
+plugins:
+  authorization: null
+  log:
+  - k8s-file
+  - none
+  - passthrough
+  - journald
+  network:
+  - bridge
+  - macvlan
+  - ipvlan
+  volume:
+  - local
+registries: {}
+store:
+  containerStore:
+    number: 0
+    paused: 0
+    running: 0
+    stopped: 0
+  graphDriverName: overlay
+  graphOptions: {}
+  graphRoot: /home/testchris/.local/share/containers/storage
+  graphRootAllocated: 39956590592
+  graphRootUsed: 16938082304
+  graphStatus:
+    Backing Filesystem: extfs
+    Native Overlay Diff: "true"
+    Supports d_type: "true"
+    Supports shifting: "false"
+    Supports volatile: "true"
+    Using metacopy: "false"
+  imageCopyTmpDir: /var/tmp
+  imageStore:
+    number: 1
+  runRoot: /run/user/1000/containers
+  transientStore: false
+  volumePath: /home/testchris/.local/share/containers/storage/volumes
+version:
+  APIVersion: 6.2.0-dev
+  Built: 1789144643
+  BuiltTime: Fri Sep 11 16:37:23 2026
+  GitCommit: 6b8f0d7b731cc38a1748458e5e2159b0c8879dd8
+  GoVersion: go1.26.0
+  Os: linux
+  OsArch: linux/amd64
+  Version: 6.2.0-dev
+
+DEBU[0000] Called info.PersistentPostRunE(./bin/podman --log-level=debug info) 
+DEBU[0000] Shutting down engines                        
+INFO[0000] Received shutdown.Stop(), terminating!        PID=179813

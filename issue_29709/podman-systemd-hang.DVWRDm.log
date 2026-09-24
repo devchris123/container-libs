@@ -1,0 +1,422 @@
+time="2026-09-11T17:00:44Z" level=debug msg="Read config file \"/home/testchris/.config/containers/containers.conf.d/90-test-crun.conf\""
+time="2026-09-11T17:00:44Z" level=info msg="/home/testchris/issue_29750/podman/bin/podman filtering at log level debug"
+time="2026-09-11T17:00:44Z" level=debug msg="Called info.PersistentPreRunE(/home/testchris/issue_29750/podman/bin/podman --log-level=debug info)"
+time="2026-09-11T17:00:44Z" level=info msg="Setting parallel job count to 7"
+time="2026-09-11T17:00:44Z" level=debug msg="Using conmon: \"/usr/bin/conmon\""
+time="2026-09-11T17:00:44Z" level=info msg="Using sqlite as database backend"
+time="2026-09-11T17:00:44Z" level=debug msg="systemd-logind: Unknown object '/'."
+time="2026-09-11T17:00:44Z" level=debug msg="Using graph driver "
+time="2026-09-11T17:00:44Z" level=debug msg="Using graph root /home/testchris/.local/share/containers/storage"
+time="2026-09-11T17:00:44Z" level=debug msg="Using run root /run/user/1000/containers"
+time="2026-09-11T17:00:44Z" level=debug msg="Using static dir /home/testchris/.local/share/containers/storage/libpod"
+time="2026-09-11T17:00:44Z" level=debug msg="Using tmp dir /run/user/1000/libpod/tmp"
+time="2026-09-11T17:00:44Z" level=debug msg="Using volume path /home/testchris/.local/share/containers/storage/volumes"
+time="2026-09-11T17:00:44Z" level=debug msg="Using transient store: false"
+time="2026-09-11T17:00:44Z" level=debug msg="Database uses empty-string graph driver, substituting default \"\""
+time="2026-09-11T17:00:44Z" level=debug msg="Initializing event backend journald"
+time="2026-09-11T17:00:44Z" level=debug msg="Not configuring container store"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime ocijail initialization failed: no valid executable found for OCI runtime ocijail: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime runc initialization failed: no valid executable found for OCI runtime runc: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime runj initialization failed: no valid executable found for OCI runtime runj: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime kata initialization failed: no valid executable found for OCI runtime kata: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime runsc initialization failed: no valid executable found for OCI runtime runsc: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime krun initialization failed: no valid executable found for OCI runtime krun: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime crun-vm initialization failed: no valid executable found for OCI runtime crun-vm: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime crun-wasm initialization failed: no valid executable found for OCI runtime crun-wasm: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Configured OCI runtime youki initialization failed: no valid executable found for OCI runtime youki: invalid argument"
+time="2026-09-11T17:00:44Z" level=debug msg="Using OCI runtime \"/usr/local/bin/crun\""
+time="2026-09-11T17:00:44Z" level=debug msg="systemd-logind: Unknown object '/'."
+time="2026-09-11T17:00:44Z" level=debug msg="Invalid systemd user session for current user"
+failed to reexec: Permission denied
+SIGQUIT: quit
+PC=0x41308e m=0 sigcode=0
+
+goroutine 0 gp=0x319ed20 m=0 mp=0x31a1bc0 [idle]:
+internal/runtime/syscall/linux.Syscall6()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/runtime/syscall/linux/asm_linux_amd64.s:36 +0xe fp=0x7ffc4509baf0 sp=0x7ffc4509bae8 pc=0x41308e
+internal/runtime/syscall/linux.EpollWait(0x243b7bbe?, {0x7ffc4509bb7c?, 0x7ffc4509bb7c?, 0x243b7bbe?}, 0x4509c140?, 0x7ffc?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/runtime/syscall/linux/syscall_linux.go:32 +0x45 fp=0x7ffc4509bb40 sp=0x7ffc4509baf0 pc=0x412ea5
+runtime.netpoll(0x3469fcb76010?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/netpoll_epoll.go:119 +0xd4 fp=0x7ffc4509c1d0 sp=0x7ffc4509bb40 pc=0x456434
+runtime.findRunnable()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:3754 +0x97f fp=0x7ffc4509c3a0 sp=0x7ffc4509c1d0 pc=0x46339f
+runtime.schedule()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:4164 +0xb1 fp=0x7ffc4509c3e0 sp=0x7ffc4509c3a0 pc=0x464a31
+runtime.park_m(0x3469fccfeb40)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:4304 +0x285 fp=0x7ffc4509c440 sp=0x7ffc4509c3e0 pc=0x464ec5
+runtime.mcall()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:496 +0x55 fp=0x7ffc4509c458 sp=0x7ffc4509c440 pc=0x49af35
+
+goroutine 1 gp=0x3469fcb221e0 m=nil [IO wait]:
+runtime.gopark(0x31a1bc0?, 0x3469fce57860?, 0x10?, 0x0?, 0xb?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fd05bff8 sp=0x3469fd05bfd8 pc=0x494d8e
+runtime.netpollblock(0x4f1018?, 0x420606?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/netpoll.go:575 +0xf7 fp=0x3469fd05c030 sp=0x3469fd05bff8 pc=0x455a37
+internal/poll.runtime_pollWait(0x76e5a2ccac00, 0x72)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/netpoll.go:351 +0x85 fp=0x3469fd05c050 sp=0x3469fd05c030 pc=0x493b45
+internal/poll.(*pollDesc).wait(0x3469fcdef480?, 0x3469fcd3c000?, 0x0)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0x3469fd05c078 sp=0x3469fd05c050 pc=0x511147
+internal/poll.(*pollDesc).waitRead(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0x3469fcdef480, {0x3469fcd3c000, 0x1000, 0x1000})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_unix.go:165 +0x2ae fp=0x3469fd05c110 sp=0x3469fd05c078 pc=0x51236e
+net.(*netFD).Read(0x3469fcdef480, {0x3469fcd3c000?, 0x0?, 0x1ff61a0?})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/net/fd_posix.go:68 +0x25 fp=0x3469fd05c158 sp=0x3469fd05c110 pc=0x5ab225
+net.(*conn).Read(0x3469fcc065c0, {0x3469fcd3c000?, 0x510e5c?, 0x8?})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/net/net.go:196 +0x45 fp=0x3469fd05c1a0 sp=0x3469fd05c158 pc=0x5bc465
+bufio.(*Reader).fill(0x3469fd05c4e8)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/bufio/bufio.go:113 +0x103 fp=0x3469fd05c1d8 sp=0x3469fd05c1a0 pc=0x5d4e03
+bufio.(*Reader).ReadSlice(0x3469fd05c4e8, 0xa)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/bufio/bufio.go:377 +0x29 fp=0x3469fd05c220 sp=0x3469fd05c1d8 pc=0x5d58a9
+bufio.(*Reader).collectFragments(0x3469fd05c4e8, 0xa)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/bufio/bufio.go:452 +0x85 fp=0x3469fd05c300 sp=0x3469fd05c220 pc=0x5d5cc5
+bufio.(*Reader).ReadBytes(0x3469fd05c3bb?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/bufio/bufio.go:479 +0x17 fp=0x3469fd05c380 sp=0x3469fd05c300 pc=0x5d5fb7
+github.com/godbus/dbus/v5.authReadLine(0x1fdfd80?)
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/auth.go:229 +0x1c fp=0x3469fd05c3f0 sp=0x3469fd05c380 pc=0xfb677c
+github.com/godbus/dbus/v5.(*Conn).Auth(0x3469fccb4b40, {0x3469fd05c600?, 0x0?, 0x346900000001?})
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/auth.go:68 +0x2b3 fp=0x3469fd05c5c8 sp=0x3469fd05c3f0 pc=0xfb5333
+go.podman.io/common/pkg/cgroups.dbusAuthConnection(0x3e8, 0x8a4795?)
+	/home/testchris/issue_29750/podman/vendor/go.podman.io/common/pkg/cgroups/cgroups_linux.go:253 +0x72 fp=0x3469fd05c620 sp=0x3469fd05c5c8 pc=0xfe7c72
+go.podman.io/common/pkg/cgroups.UserConnection.func1()
+	/home/testchris/issue_29750/podman/vendor/go.podman.io/common/pkg/cgroups/cgroups_linux.go:490 +0x1e fp=0x3469fd05c640 sp=0x3469fd05c620 pc=0xfe973e
+github.com/coreos/go-systemd/v22/dbus.NewConnection(0x3469fd05c6d8)
+	/home/testchris/issue_29750/podman/vendor/github.com/coreos/go-systemd/v22/dbus/dbus.go:191 +0x27 fp=0x3469fd05c6d0 sp=0x3469fd05c640 pc=0xfd9b47
+go.podman.io/common/pkg/cgroups.UserConnection(0x510dff?)
+	/home/testchris/issue_29750/podman/vendor/go.podman.io/common/pkg/cgroups/cgroups_linux.go:489 +0x29 fp=0x3469fd05c6f8 sp=0x3469fd05c6d0 pc=0xfe96e9
+go.podman.io/common/pkg/systemd.RunUnderSystemdScope(0x2b862, {0x1ed4f25, 0xa}, {0x3469fcb651a0, 0x1b})
+	/home/testchris/issue_29750/podman/vendor/go.podman.io/common/pkg/systemd/systemd_linux.go:107 +0x74 fp=0x3469fd05c8c0 sp=0x3469fd05c6f8 pc=0xfeec54
+go.podman.io/common/pkg/systemd.moveProcessToScope(0x3469fd05c980?, {0x1ed4f25?, 0xa?}, {0x3469fcb651a0?, 0x1e6d880?})
+	/home/testchris/issue_29750/podman/vendor/go.podman.io/common/pkg/systemd/systemd_linux.go:51 +0x2f fp=0x3469fd05c958 sp=0x3469fd05c8c0 pc=0xfee76f
+go.podman.io/common/pkg/systemd.moveProcessPIDFileToScope({0x3469fcd45650, 0x23}, {0x1ed4f25, 0xa}, {0x3469fcb651a0, 0x1b})
+	/home/testchris/issue_29750/podman/vendor/go.podman.io/common/pkg/systemd/systemd_linux.go:47 +0x21c fp=0x3469fd05c9f0 sp=0x3469fd05c958 pc=0xfee6dc
+go.podman.io/common/pkg/systemd.MovePauseProcessToScope({0x3469fcd45650, 0x23})
+	/home/testchris/issue_29750/podman/vendor/go.podman.io/common/pkg/systemd/systemd_linux.go:84 +0x166 fp=0x3469fd05ca98 sp=0x3469fd05c9f0 pc=0xfeeac6
+go.podman.io/podman/v6/libpod.makeRuntime({0x1ff61a0, 0x31c81e0}, 0x3469fcca6408)
+	/home/testchris/issue_29750/podman/libpod/runtime.go:631 +0x1c71 fp=0x3469fd05cfe0 sp=0x3469fd05ca98 pc=0x1568071
+go.podman.io/podman/v6/libpod.newRuntimeFromConfig({0x1ff61a0, 0x31c81e0}, 0x3469fcbff508, {0x3469fcc273b0, 0x2, 0x3469fcc273b0?})
+	/home/testchris/issue_29750/podman/libpod/runtime.go:209 +0x345 fp=0x3469fd05d2a0 sp=0x3469fd05cfe0 pc=0x1565805
+go.podman.io/podman/v6/libpod.NewRuntime({0x1ff61a0, 0x31c81e0}, {0x3469fcc273b0, 0x2, 0x2})
+	/home/testchris/issue_29750/podman/libpod/runtime.go:180 +0x5a fp=0x3469fd05d2e0 sp=0x3469fd05d2a0 pc=0x156547a
+go.podman.io/podman/v6/pkg/domain/infra.getRuntime({0x1ff61a0, 0x31c81e0}, 0x3469fd06b700, 0x3469fd05d6b8)
+	/home/testchris/issue_29750/podman/pkg/domain/infra/runtime_libpod.go:216 +0x1bf2 fp=0x3469fd05d698 sp=0x3469fd05d2e0 pc=0x16b8952
+go.podman.io/podman/v6/pkg/domain/infra.GetRuntime.func1()
+	/home/testchris/issue_29750/podman/pkg/domain/infra/runtime_libpod.go:45 +0x5b fp=0x3469fd05d6d8 sp=0x3469fd05d698 pc=0x16b6cfb
+sync.(*Once).doSlow(0x1ed3fcb?, 0xa?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/sync/once.go:78 +0xac fp=0x3469fd05d730 sp=0x3469fd05d6d8 pc=0x4a6bcc
+sync.(*Once).Do(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/sync/once.go:69
+go.podman.io/podman/v6/pkg/domain/infra.GetRuntime({0x1ff61a0?, 0x31c81e0?}, 0x7?, 0x41e72e?)
+	/home/testchris/issue_29750/podman/pkg/domain/infra/runtime_libpod.go:44 +0x55 fp=0x3469fd05d778 sp=0x3469fd05d730 pc=0x16b6c35
+go.podman.io/podman/v6/pkg/domain/infra.NewLibpodRuntime(0x4?, 0x1ec988e?)
+	/home/testchris/issue_29750/podman/pkg/domain/infra/runtime_proxy.go:16 +0x27 fp=0x3469fd05d7b0 sp=0x3469fd05d778 pc=0x16ba7a7
+go.podman.io/podman/v6/pkg/domain/infra.NewContainerEngine(0x64f611?)
+	/home/testchris/issue_29750/podman/pkg/domain/infra/runtime_abi.go:17 +0x49 fp=0x3469fd05d818 sp=0x3469fd05d7b0 pc=0x16b6829
+go.podman.io/podman/v6/cmd/podman/registry.NewContainerEngine(0x30f5800, {0x319faa0?, 0xe?, 0x1f?})
+	/home/testchris/issue_29750/podman/cmd/podman/registry/registry.go:86 +0x246 fp=0x3469fd05d860 sp=0x3469fd05d818 pc=0x16bbae6
+main.persistentPreRunE(0x30f5800, {0x31c81e0, 0x0, 0x0})
+	/home/testchris/issue_29750/podman/cmd/podman/root.go:388 +0x985 fp=0x3469fd05db58 sp=0x3469fd05d860 pc=0x1881725
+github.com/spf13/cobra.(*Command).execute(0x30f5800, {0x3469fcc141c0, 0x0, 0x0})
+	/home/testchris/issue_29750/podman/vendor/github.com/spf13/cobra/command.go:986 +0x9a4 fp=0x3469fd05dd00 sp=0x3469fd05db58 pc=0x64c1e4
+github.com/spf13/cobra.(*Command).ExecuteC(0x30db160)
+	/home/testchris/issue_29750/podman/vendor/github.com/spf13/cobra/command.go:1148 +0x465 fp=0x3469fd05ddf0 sp=0x3469fd05dd00 pc=0x64cc85
+github.com/spf13/cobra.(*Command).ExecuteContextC(...)
+	/home/testchris/issue_29750/podman/vendor/github.com/spf13/cobra/command.go:1080
+main.Execute()
+	/home/testchris/issue_29750/podman/cmd/podman/root.go:139 +0x58 fp=0x3469fd05de60 sp=0x3469fd05ddf0 pc=0x1880218
+main.main()
+	/home/testchris/issue_29750/podman/cmd/podman/main.go:75 +0x545 fp=0x3469fd05df48 sp=0x3469fd05de60 pc=0x187f465
+runtime.main()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:290 +0x2d5 fp=0x3469fd05dfe0 sp=0x3469fd05df48 pc=0x45cf15
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fd05dfe8 sp=0x3469fd05dfe0 pc=0x49cb81
+
+goroutine 2 gp=0x3469fcb22d20 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8cfa8 sp=0x3469fcb8cf88 pc=0x494d8e
+runtime.goparkunlock(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:468
+runtime.forcegchelper()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:375 +0xb3 fp=0x3469fcb8cfe0 sp=0x3469fcb8cfa8 pc=0x45d233
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8cfe8 sp=0x3469fcb8cfe0 pc=0x49cb81
+created by runtime.init.7 in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:363 +0x1a
+
+goroutine 3 gp=0x3469fcb232c0 m=nil [GC sweep wait]:
+runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8d788 sp=0x3469fcb8d768 pc=0x494d8e
+runtime.goparkunlock(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:468
+runtime.bgsweep(0x3469fcb6a100)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgcsweep.go:324 +0x151 fp=0x3469fcb8d7c8 sp=0x3469fcb8d788 pc=0x444711
+runtime.gcenable.gowrap1()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:214 +0x17 fp=0x3469fcb8d7e0 sp=0x3469fcb8d7c8 pc=0x435a97
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8d7e8 sp=0x3469fcb8d7e0 pc=0x49cb81
+created by runtime.gcenable in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:214 +0x66
+
+goroutine 4 gp=0x3469fcb234a0 m=nil [GC scavenge wait]:
+runtime.gopark(0x10000?, 0x1fcbd68?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8df78 sp=0x3469fcb8df58 pc=0x494d8e
+runtime.goparkunlock(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:468
+runtime.(*scavengerState).park(0x319c700)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgcscavenge.go:425 +0x49 fp=0x3469fcb8dfa8 sp=0x3469fcb8df78 pc=0x442169
+runtime.bgscavenge(0x3469fcb6a100)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgcscavenge.go:658 +0x59 fp=0x3469fcb8dfc8 sp=0x3469fcb8dfa8 pc=0x4426f9
+runtime.gcenable.gowrap2()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:215 +0x17 fp=0x3469fcb8dfe0 sp=0x3469fcb8dfc8 pc=0x435a57
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8dfe8 sp=0x3469fcb8dfe0 pc=0x49cb81
+created by runtime.gcenable in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:215 +0xa5
+
+goroutine 18 gp=0x3469fcc00000 m=nil [GOMAXPROCS updater (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb88788 sp=0x3469fcb88768 pc=0x494d8e
+runtime.goparkunlock(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:468
+runtime.updateMaxProcsGoroutine()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:7095 +0xe7 fp=0x3469fcb887e0 sp=0x3469fcb88788 pc=0x46b8a7
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb887e8 sp=0x3469fcb887e0 pc=0x49cb81
+created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:7083 +0x37
+
+goroutine 19 gp=0x3469fcc005a0 m=nil [finalizer wait]:
+runtime.gopark(0x46c8f5?, 0x1c8?, 0xa0?, 0x2e?, 0x3469fcb8c601?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8c620 sp=0x3469fcb8c600 pc=0x494d8e
+runtime.runFinalizers()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mfinal.go:210 +0x107 fp=0x3469fcb8c7e0 sp=0x3469fcb8c620 pc=0x434a07
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8c7e8 sp=0x3469fcb8c7e0 pc=0x49cb81
+created by runtime.createfing in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mfinal.go:172 +0x3d
+
+goroutine 20 gp=0x3469fccfe780 m=nil [cleanup wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb88f68 sp=0x3469fcb88f48 pc=0x494d8e
+runtime.goparkunlock(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:468
+runtime.(*cleanupQueue).dequeue(0x319e4a0)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mcleanup.go:522 +0xd4 fp=0x3469fcb88fa0 sp=0x3469fcb88f68 pc=0x431854
+runtime.runCleanups()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mcleanup.go:718 +0x45 fp=0x3469fcb88fe0 sp=0x3469fcb88fa0 pc=0x431ec5
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb88fe8 sp=0x3469fcb88fe0 pc=0x49cb81
+created by runtime.(*cleanupQueue).createGs in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mcleanup.go:672 +0xa5
+
+goroutine 5 gp=0x3469fce943c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x97ad138d2bd7?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8e740 sp=0x3469fcb8e720 pc=0x494d8e
+runtime.gcBgMarkWorker(0x3469fcf9a000)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:1791 +0xeb fp=0x3469fcb8e7c8 sp=0x3469fcb8e740 pc=0x43856b
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:1695 +0x17 fp=0x3469fcb8e7e0 sp=0x3469fcb8e7c8 pc=0x438457
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8e7e8 sp=0x3469fcb8e7e0 pc=0x49cb81
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:1695 +0x105
+
+goroutine 6 gp=0x3469fce945a0 m=nil [GC worker (idle)]:
+runtime.gopark(0x97ad1387efa4?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8ef40 sp=0x3469fcb8ef20 pc=0x494d8e
+runtime.gcBgMarkWorker(0x3469fcf9a000)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:1791 +0xeb fp=0x3469fcb8efc8 sp=0x3469fcb8ef40 pc=0x43856b
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:1695 +0x17 fp=0x3469fcb8efe0 sp=0x3469fcb8efc8 pc=0x438457
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8efe8 sp=0x3469fcb8efe0 pc=0x49cb81
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/mgc.go:1695 +0x105
+
+goroutine 7 gp=0x3469fce94d20 m=nil [select]:
+runtime.gopark(0x3469fcb8f788?, 0x2?, 0x60?, 0x59?, 0x3469fcb8f784?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8f620 sp=0x3469fcb8f600 pc=0x494d8e
+runtime.selectgo(0x3469fcb8f788, 0x3469fcb8f780, 0x0?, 0x0, 0x0?, 0x1)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/select.go:351 +0xaa5 fp=0x3469fcb8f750 sp=0x3469fcb8f620 pc=0x4708e5
+database/sql.(*DB).connectionOpener(0x3469fcf5f1e0, {0x1ff62b8, 0x3469fcbd05f0})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/database/sql/sql.go:1261 +0x89 fp=0x3469fcb8f7b8 sp=0x3469fcb8f750 pc=0xd16be9
+database/sql.OpenDB.gowrap1()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/database/sql/sql.go:841 +0x1f fp=0x3469fcb8f7e0 sp=0x3469fcb8f7b8 pc=0xd14f3f
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8f7e8 sp=0x3469fcb8f7e0 pc=0x49cb81
+created by database/sql.OpenDB in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/database/sql/sql.go:841 +0x130
+
+goroutine 11 gp=0x3469fce954a0 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x1b93340?, 0x0?, 0x0?, 0x3469fcb8a7a8?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8a718 sp=0x3469fcb8a6f8 pc=0x494d8e
+runtime.chanrecv(0x3469fcf2c150, 0x0, 0x1)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/chan.go:667 +0x4ae fp=0x3469fcb8a790 sp=0x3469fcb8a718 pc=0x4238ce
+runtime.chanrecv1(0x3469fcbd0730?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/chan.go:509 +0x12 fp=0x3469fcb8a7b8 sp=0x3469fcb8a790 pc=0x4233f2
+github.com/godbus/dbus/v5.newConn.func1()
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/conn.go:303 +0x2c fp=0x3469fcb8a7e0 sp=0x3469fcb8a7b8 pc=0xfb752c
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8a7e8 sp=0x3469fcb8a7e0 pc=0x49cb81
+created by github.com/godbus/dbus/v5.newConn in goroutine 1
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/conn.go:302 +0x4da
+
+goroutine 12 gp=0x3469fce95680 m=nil [IO wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcf3fa78 sp=0x3469fcf3fa58 pc=0x494d8e
+runtime.netpollblock(0x0?, 0x420606?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/netpoll.go:575 +0xf7 fp=0x3469fcf3fab0 sp=0x3469fcf3fa78 pc=0x455a37
+internal/poll.runtime_pollWait(0x76e5a2ccb000, 0x72)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/netpoll.go:351 +0x85 fp=0x3469fcf3fad0 sp=0x3469fcf3fab0 pc=0x493b45
+internal/poll.(*pollDesc).wait(0x3469fcdeeb00?, 0x3469fcc1c010?, 0x0)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0x3469fcf3faf8 sp=0x3469fcf3fad0 pc=0x511147
+internal/poll.(*pollDesc).waitRead(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).ReadMsg(0x3469fcdeeb00, {0x3469fcc1c010, 0x10, 0x10}, {0x3469fcea6628, 0x1000, 0x1000}, 0x40000000)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_unix.go:295 +0x37d fp=0x3469fcf3fbe0 sp=0x3469fcf3faf8 pc=0x51343d
+net.(*netFD).readMsg(0x3469fcdeeb00, {0x3469fcc1c010?, 0x3469fcc27bd0?, 0x3469fcf3fcb0?}, {0x3469fcea6628?, 0x10?, 0x1b95f40?}, 0x1fcbde0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/net/fd_posix.go:91 +0x31 fp=0x3469fcf3fc68 sp=0x3469fcf3fbe0 pc=0x5ab631
+net.(*UnixConn).readMsg(0x3469fcc06550, {0x3469fcc1c010?, 0x1?, 0x586bc5?}, {0x3469fcea6628?, 0x3469fcf3fd80?, 0x423293?})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/net/unixsock_posix.go:115 +0x3d fp=0x3469fcf3fcf8 sp=0x3469fcf3fc68 pc=0x5cbbfd
+net.(*UnixConn).ReadMsgUnix(0x3469fcc06550, {0x3469fcc1c010?, 0x3469fcf3fe58?, 0x587d2c?}, {0x3469fcea6628?, 0x31c81e0?, 0x1fe57d0?})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/net/unixsock.go:143 +0x36 fp=0x3469fcf3fd70 sp=0x3469fcf3fcf8 pc=0x5c9a56
+github.com/godbus/dbus/v5.(*oobReader).Read(0x3469fcea6608, {0x3469fcc1c010?, 0x0?, 0x42d7e9?})
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/transport_unix.go:40 +0x3c fp=0x3469fcf3fde8 sp=0x3469fcf3fd70 pc=0xfcf0bc
+io.ReadAtLeast({0x1fdfda0, 0x3469fcea6608}, {0x3469fcc1c010, 0x10, 0x10}, 0x10)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/io/io.go:335 +0x8e fp=0x3469fcf3fe30 sp=0x3469fcf3fde8 pc=0x4abfee
+io.ReadFull(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/io/io.go:354
+github.com/godbus/dbus/v5.(*unixTransport).ReadMessage(0x3469fcb47338)
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/transport_unix.go:123 +0x225 fp=0x3469fcf3ff58 sp=0x3469fcf3fe30 pc=0xfcf7c5
+github.com/godbus/dbus/v5.(*Conn).inWorker(0x3469fccb4960)
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/conn.go:390 +0x37 fp=0x3469fcf3ffc8 sp=0x3469fcf3ff58 pc=0xfb7a57
+github.com/godbus/dbus/v5.(*Conn).Auth.gowrap1()
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/auth.go:118 +0x17 fp=0x3469fcf3ffe0 sp=0x3469fcf3ffc8 pc=0xfb5a17
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcf3ffe8 sp=0x3469fcf3ffe0 pc=0x49cb81
+created by github.com/godbus/dbus/v5.(*Conn).Auth in goroutine 1
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/auth.go:118 +0x7b1
+
+goroutine 26 gp=0x3469fce95860 m=nil [select, locked to thread]:
+runtime.gopark(0x3469fcb8b7a8?, 0x2?, 0x1?, 0x58?, 0x3469fcb8b794?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8b628 sp=0x3469fcb8b608 pc=0x494d8e
+runtime.selectgo(0x3469fcb8b7a8, 0x3469fcb8b790, 0x0?, 0x0, 0x4233f2?, 0x1)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/select.go:351 +0xaa5 fp=0x3469fcb8b758 sp=0x3469fcb8b628 pc=0x4708e5
+runtime.ensureSigM.func1()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/signal_unix.go:1091 +0x188 fp=0x3469fcb8b7e0 sp=0x3469fcb8b758 pc=0x48e9c8
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8b7e8 sp=0x3469fcb8b7e0 pc=0x49cb81
+created by runtime.ensureSigM in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/signal_unix.go:1074 +0xc5
+
+goroutine 27 gp=0x3469fce95a40 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x3469fcc02070?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcb8be98 sp=0x3469fcb8be78 pc=0x494d8e
+runtime.chanrecv(0x3469fcbb9810, 0x3469fcb8bfc0, 0x1)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/chan.go:667 +0x4ae fp=0x3469fcb8bf10 sp=0x3469fcb8be98 pc=0x4238ce
+runtime.chanrecv2(0x3469fcf2c2a0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/chan.go:514 +0x12 fp=0x3469fcb8bf38 sp=0x3469fcb8bf10 pc=0x423412
+go.podman.io/podman/v6/pkg/rootless.waitAndProxySignalsToChild.func1()
+	/home/testchris/issue_29750/podman/pkg/rootless/rootless_linux.go:394 +0x49 fp=0x3469fcb8bfe0 sp=0x3469fcb8bf38 pc=0x10ef8a9
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcb8bfe8 sp=0x3469fcb8bfe0 pc=0x49cb81
+created by go.podman.io/podman/v6/pkg/rootless.waitAndProxySignalsToChild in goroutine 1
+	/home/testchris/issue_29750/podman/pkg/rootless/rootless_linux.go:393 +0x1c5
+
+goroutine 34 gp=0x3469fce95c20 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x1b93340?, 0x0?, 0x0?, 0x3469fcdac7a8?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcdac718 sp=0x3469fcdac6f8 pc=0x494d8e
+runtime.chanrecv(0x3469fcf2c310, 0x0, 0x1)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/chan.go:667 +0x4ae fp=0x3469fcdac790 sp=0x3469fcdac718 pc=0x4238ce
+runtime.chanrecv1(0x3469fcbd09b0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/chan.go:509 +0x12 fp=0x3469fcdac7b8 sp=0x3469fcdac790 pc=0x4233f2
+github.com/godbus/dbus/v5.newConn.func1()
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/conn.go:303 +0x2c fp=0x3469fcdac7e0 sp=0x3469fcdac7b8 pc=0xfb752c
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcdac7e8 sp=0x3469fcdac7e0 pc=0x49cb81
+created by github.com/godbus/dbus/v5.newConn in goroutine 1
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/conn.go:302 +0x4da
+
+goroutine 35 gp=0x3469fccfe5a0 m=nil [IO wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcf41a78 sp=0x3469fcf41a58 pc=0x494d8e
+runtime.netpollblock(0x0?, 0x420606?, 0x0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/netpoll.go:575 +0xf7 fp=0x3469fcf41ab0 sp=0x3469fcf41a78 pc=0x455a37
+internal/poll.runtime_pollWait(0x76e5a2ccae00, 0x72)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/netpoll.go:351 +0x85 fp=0x3469fcf41ad0 sp=0x3469fcf41ab0 pc=0x493b45
+internal/poll.(*pollDesc).wait(0x3469fcdef100?, 0x3469fcd21670?, 0x0)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0x3469fcf41af8 sp=0x3469fcf41ad0 pc=0x511147
+internal/poll.(*pollDesc).waitRead(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).ReadMsg(0x3469fcdef100, {0x3469fcd21670, 0x10, 0x10}, {0x3469fcd14628, 0x1000, 0x1000}, 0x40000000)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/internal/poll/fd_unix.go:295 +0x37d fp=0x3469fcf41be0 sp=0x3469fcf41af8 pc=0x51343d
+net.(*netFD).readMsg(0x3469fcdef100, {0x3469fcd21670?, 0x3469fcf44080?, 0x3469fcf41cb0?}, {0x3469fcd14628?, 0x10?, 0x1b95f40?}, 0x1fcbde0?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/net/fd_posix.go:91 +0x31 fp=0x3469fcf41c68 sp=0x3469fcf41be0 pc=0x5ab631
+net.(*UnixConn).readMsg(0x3469fcc06588, {0x3469fcd21670?, 0x1?, 0x586bc5?}, {0x3469fcd14628?, 0x3469fcf41d80?, 0x423293?})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/net/unixsock_posix.go:115 +0x3d fp=0x3469fcf41cf8 sp=0x3469fcf41c68 pc=0x5cbbfd
+net.(*UnixConn).ReadMsgUnix(0x3469fcc06588, {0x3469fcd21670?, 0x3469fcf41e58?, 0x587d2c?}, {0x3469fcd14628?, 0x31c81e0?, 0x1fe57d0?})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/net/unixsock.go:143 +0x36 fp=0x3469fcf41d70 sp=0x3469fcf41cf8 pc=0x5c9a56
+github.com/godbus/dbus/v5.(*oobReader).Read(0x3469fcd14608, {0x3469fcd21670?, 0x0?, 0x42d7e9?})
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/transport_unix.go:40 +0x3c fp=0x3469fcf41de8 sp=0x3469fcf41d70 pc=0xfcf0bc
+io.ReadAtLeast({0x1fdfda0, 0x3469fcd14608}, {0x3469fcd21670, 0x10, 0x10}, 0x10)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/io/io.go:335 +0x8e fp=0x3469fcf41e30 sp=0x3469fcf41de8 pc=0x4abfee
+io.ReadFull(...)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/io/io.go:354
+github.com/godbus/dbus/v5.(*unixTransport).ReadMessage(0x3469fcb47770)
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/transport_unix.go:123 +0x225 fp=0x3469fcf41f58 sp=0x3469fcf41e30 pc=0xfcf7c5
+github.com/godbus/dbus/v5.(*Conn).inWorker(0x3469fccb4a50)
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/conn.go:390 +0x37 fp=0x3469fcf41fc8 sp=0x3469fcf41f58 pc=0xfb7a57
+github.com/godbus/dbus/v5.(*Conn).Auth.gowrap1()
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/auth.go:118 +0x17 fp=0x3469fcf41fe0 sp=0x3469fcf41fc8 pc=0xfb5a17
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcf41fe8 sp=0x3469fcf41fe0 pc=0x49cb81
+created by github.com/godbus/dbus/v5.(*Conn).Auth in goroutine 1
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/auth.go:118 +0x7b1
+
+goroutine 39 gp=0x3469fccfe960 m=6 mp=0x3469fcf84808 [syscall]:
+runtime.notetsleepg(0x31c9b60, 0xffffffffffffffff)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/lock_futex.go:123 +0x29 fp=0x3469fcdad7a0 sp=0x3469fcdad778 pc=0x42a149
+os/signal.signal_recv()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/sigqueue.go:152 +0x98 fp=0x3469fcdad7c0 sp=0x3469fcdad7a0 pc=0x497338
+os/signal.loop()
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/os/signal/signal_unix.go:23 +0x13 fp=0x3469fcdad7e0 sp=0x3469fcdad7c0 pc=0x67c4f3
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcdad7e8 sp=0x3469fcdad7e0 pc=0x49cb81
+created by os/signal.Notify.func1.1 in goroutine 1
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/os/signal/signal.go:152 +0x1f
+
+goroutine 40 gp=0x3469fccfeb40 m=nil [chan receive]:
+runtime.gopark(0x3469fcb201b0?, 0x1b93340?, 0x0?, 0x0?, 0x3469fcdacfa8?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/proc.go:462 +0xce fp=0x3469fcdacf18 sp=0x3469fcdacef8 pc=0x494d8e
+runtime.chanrecv(0x3469fcc02a10, 0x0, 0x1)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/chan.go:667 +0x4ae fp=0x3469fcdacf90 sp=0x3469fcdacf18 pc=0x4238ce
+runtime.chanrecv1(0x3469fcbd0af0?, 0x86467b?)
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/chan.go:509 +0x12 fp=0x3469fcdacfb8 sp=0x3469fcdacf90 pc=0x4233f2
+github.com/godbus/dbus/v5.newConn.func1()
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/conn.go:303 +0x2c fp=0x3469fcdacfe0 sp=0x3469fcdacfb8 pc=0xfb752c
+runtime.goexit({})
+	/home/testchris/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.26.0.linux-amd64/src/runtime/asm_amd64.s:1771 +0x1 fp=0x3469fcdacfe8 sp=0x3469fcdacfe0 pc=0x49cb81
+created by github.com/godbus/dbus/v5.newConn in goroutine 1
+	/home/testchris/issue_29750/podman/vendor/github.com/godbus/dbus/v5/conn.go:302 +0x4da
+
+rax    0xfffffffffffffffc
+rbx    0x5
+rcx    0x41308e
+rdx    0x80
+rdi    0x5
+rsi    0x7ffc4509bb7c
+rbp    0x7ffc4509bb30
+rsp    0x7ffc4509bae8
+r8     0x0
+r9     0x0
+r10    0xffffffffffffffff
+r11    0x246
+r12    0x7ffc4509bbc0
+r13    0x1
+r14    0x319ed20
+r15    0x1
+rip    0x41308e
+rflags 0x246
+cs     0x33
+fs     0x0
+gs     0x0
